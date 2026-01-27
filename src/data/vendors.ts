@@ -1,0 +1,37 @@
+export const vendors = [
+  {
+    id: "1",
+    slug: "cool-shoes",
+    name: "Cool Shoes Co.",
+    logo: "/images/vendors/cool-shoes-logo.png",
+    heroImage: "/images/vendors/cool-shoes-hero.png",
+    description: "Trendy, comfortable footwear designed for everyday style.",
+    featured: true,
+  },
+  {
+    id: "2",
+    slug: "gadget-world",
+    name: "Gadget World",
+    logo: "/images/vendors/gadget-world-logo.png",
+    heroImage: "/images/vendors/gadget-world-hero.png",
+    description: "The latest gadgets, smart devices, and tech accessories.",
+    featured: true,
+  },
+  {
+    id: "3",
+    slug: "home-essentials",
+    name: "Home Essentials",
+    logo: "/images/vendors/home-essentials-logo.png",
+    heroImage: "/images/vendors/home-essentials-hero.png",
+    description: "Minimal, functional furniture and home accessories.",
+  },
+  {
+    id: "4",
+    slug: "creative-tools",
+    name: "Creative Tools",
+    logo: "/images/vendors/creative-tools-logo.png",
+    heroImage: "/images/vendors/creative-tools-hero.png",
+    description: "Tools and gear for designers, artists, and creators.",
+    featured: true,
+  },
+];

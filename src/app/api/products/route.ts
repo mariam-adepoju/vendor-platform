@@ -1,23 +1,14 @@
-import { clsx, type ClassValue } from "clsx";
-import { twMerge } from "tailwind-merge";
-import { vendors, Vendor } from "@/data/vendors";
-import { products, Product } from "@/data/products";
+import { NextRequest, NextResponse } from "next/server";
+import { products } from "@/data/products";
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-}
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url);
+  const vendorSlug = searchParams.get("vendorSlug") || "";
+  const search = searchParams.get("search") || "";
+  const sort = searchParams.get("sort"); // "price_asc", "price_desc", "recent"
+  const page = Number(searchParams.get("page") || 1);
+  const perPage = Number(searchParams.get("perPage") || 6);
 
-export function getVendor(slug: string): Vendor | undefined {
-  return vendors.find((v) => v.slug === slug);
-}
-
-export function getVendorProducts(
-  vendorSlug: string,
-  search = "",
-  sort: "price_asc" | "price_desc" | "recent" = "recent",
-  page = 1,
-  perPage = 6,
-) {
   let filtered = products.filter((p) => p.vendorSlug === vendorSlug);
 
   if (search) {
@@ -37,8 +28,8 @@ export function getVendorProducts(
   const start = (page - 1) * perPage;
   const end = start + perPage;
 
-  return {
+  return NextResponse.json({
     total: filtered.length,
     products: filtered.slice(start, end),
-  };
+  });
 }
