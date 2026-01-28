@@ -49,11 +49,6 @@ export default function VendorSearch({ vendors }: VendorSearchProps) {
                                     onSelect={() => goToVendor(vendor.slug)}
                                     className="flex items-center gap-3"
                                 >
-                                    <img
-                                        src={vendor.logo}
-                                        alt={vendor.name}
-                                        className="w-6 h-6 object-contain"
-                                    />
                                     <span>{vendor.name}</span>
                                 </CommandItem>
                             ))}
