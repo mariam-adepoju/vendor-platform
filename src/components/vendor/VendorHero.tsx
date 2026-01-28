@@ -4,9 +4,8 @@ import { Vendor } from "@/types/vendor";
 export default function VendorHero({ vendor }: { vendor: Vendor }) {
     const images = vendor.heroImage || [];
     return (
-        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-24 overflow-hidden">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-
+        <section className="max-w-7xl mx-auto px-6 py-2 lg:py-10 overflow-hidden">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                 <div className="flex flex-col space-y-6 md:space-y-10 text-center lg:text-left order-2 lg:order-1">
                     <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-wide text-slate-900">
                         Explore {vendor.name} Exclusive Collections.
