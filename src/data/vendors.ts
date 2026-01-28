@@ -4,7 +4,7 @@ export const vendors = [
     slug: "cool-shoes",
     name: "CoolShoes",
     logo: "Footprints",
-    heroImage: "/images/vendors/cool-shoes-hero.png",
+    heroImage: ["/images/shoes.jpg", "/images/shoes1.jpg"],
     description: "Trendy, comfortable footwear designed for everyday style.",
     featured: true,
   },
@@ -13,7 +13,7 @@ export const vendors = [
     slug: "gadget-world",
     name: "GadgetWorld",
     logo: "Tv",
-    heroImage: "/images/vendors/gadget-world-hero.png",
+    heroImage: ["/images/gadget.jpg", "/images/gadget1.jpg"],
     description: "The latest gadgets, smart devices, and tech accessories.",
     featured: true,
   },
@@ -22,7 +22,7 @@ export const vendors = [
     slug: "home-essentials",
     name: "HomeEssentials",
     logo: "Lamp",
-    heroImage: "/images/vendors/home-essentials-hero.png",
+    heroImage: ["/images/essen.jpg", "/images/essen1.jpg"],
     description: "Minimal, functional furniture and home accessories.",
   },
   {
@@ -30,8 +30,9 @@ export const vendors = [
     slug: "creative-tools",
     name: "CreativeTools",
     logo: "Tablet",
-    heroImage: "/images/vendors/creative-tools-hero.png",
-    description: "Tools and gear for designers, artists, and creators.",
+    heroImage: ["/images/gadget1.jpg", "/images/gadget1.jpg"],
+    description:
+      "Shop latest and trendy Tools and gear for designers, artists, and creators.",
     featured: true,
   },
 ];
