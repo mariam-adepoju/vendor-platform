@@ -1,21 +1,22 @@
 import Image from "next/image";
 import { Product } from "@/types/product";
+import { Card } from "../ui/card";
 
 export default function ProductCard({ product }: { product: Product }) {
     return (
-        <div className="group rounded-xl border bg-white p-4 transition hover:shadow-md">
-            <div className="relative mb-4 aspect-square overflow-hidden rounded-lg bg-muted">
+        <Card className="group p-2 transition hover:shadow-md">
+            <div className="relative aspect-square overflow-hidden mx-auto w-full">
                 <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover transition group-hover:scale-105"
+                    className="object-contain"
                 />
             </div>
-            <h3 className="font-semibold leading-tight">{product.name}</h3>
-            <p className="mt-3 font-bold">
+            <h3 className="font-semibold truncate leading-tight text-sm sm:text-base" title={product.name}>{product.name}</h3>
+            <p className="mt-1 font-bold text-sm sm:text-base ">
                 ₦{product.price.toLocaleString()}
             </p>
-        </div>
+        </Card>
     );
 }
