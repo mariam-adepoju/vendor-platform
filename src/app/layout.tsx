@@ -16,7 +16,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NODE_ENV === "production"
-      ? "https://your-padisquare-domain.com"
+      ? "https://vendor-platform-chi.vercel.app/"
       : "http://localhost:3000"
   ),
   title: {
