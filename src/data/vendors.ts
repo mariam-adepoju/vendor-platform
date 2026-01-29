@@ -31,7 +31,7 @@ export const vendors: Vendor[] = [
     slug: "creative-tools",
     name: "CreativeTools",
     logo: "Tablet",
-    heroImage: ["/images/gadget.png", "/images/gadget1.png"],
+    heroImage: ["/images/gadget1.png", "/images/gadget1.png"],
     description:
       "Shop latest and trendy Tools and gear for designers, artists, and creators.",
     featured: true,
