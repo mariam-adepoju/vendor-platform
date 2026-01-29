@@ -10,7 +10,7 @@ const VendorHeader = ({ vendor }: VendorHeaderProps) => {
     const Icon = vendorIcons[vendor.logo];
 
     return (
-        <header className="px-5 py-3 bg-white flex items-center justify-between border-b">
+        <header className="px-5 py-3 flex items-center justify-between  border-b">
             <div className="flex items-center gap-2">
                 {Icon && (
                     <div className="h-10 w-10 rounded-lg bg-brand/10 flex items-center justify-center">
@@ -20,7 +20,11 @@ const VendorHeader = ({ vendor }: VendorHeaderProps) => {
                 <p className="text-lg font-semibold">{vendor.name}</p>
             </div>
             <div>
-                <Button><Link href="/">Back Home</Link></Button>
+                <Button variant="outline" asChild className="border-brand/20 hover:border-brand hover:bg-brand/5 dark:hover:bg-brand/10 transition-all">
+                    <Link href="/" className="text-brand flex items-center gap-2">
+                        ← <span className="hidden sm:inline">Back Home</span>
+                    </Link>
+                </Button>
             </div>
         </header>
     );

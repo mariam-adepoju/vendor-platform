@@ -21,13 +21,13 @@ export default function ProductSearch() {
     }, [debouncedQuery, router]);
 
     return (
-        <div className="w-full md:max-w-sm">
+        <div className="w-full md:max-w-sm text-muted-foreground">
             <input
                 type="text"
                 placeholder="Search products..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full rounded-lg border px-4 py-2 focus:outline-none focus:ring-2 focus:ring-brand transition-all"
+                className="w-full rounded-lg border px-4 py-2 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 focus:ring-brand focus:border-brand/50"
             />
         </div>
     );

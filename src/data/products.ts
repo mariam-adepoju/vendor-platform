@@ -1,4 +1,6 @@
-export const products = [
+import { Product } from "@/types/product";
+
+export const products: Product[] = [
   {
     id: "p1",
     vendorSlug: "cool-shoes",
@@ -6,7 +8,6 @@ export const products = [
     price: 129.99,
     image: "/images/air-max.png",
     createdAt: "2026-01-15T10:00:00Z",
-    featured: true,
   },
   {
     id: "p2",
@@ -21,7 +22,7 @@ export const products = [
     vendorSlug: "cool-shoes",
     name: "Street Runners V2",
     price: 64.95,
-    image: "/images/street-runner.jpg",
+    image: "/images/street-runner.png",
     createdAt: "2026-01-21T09:00:00Z",
   },
   {
@@ -61,7 +62,7 @@ export const products = [
     vendorSlug: "cool-shoes",
     name: "Neon Lite Trainers",
     price: 72.0,
-    image: "/images/street-runner.jpg",
+    image: "/images/street-runner.png",
     createdAt: "2026-01-31T09:15:00Z",
   },
   {
@@ -71,7 +72,6 @@ export const products = [
     price: 159.99,
     image: "/images/earbuds.png",
     createdAt: "2026-01-20T08:00:00Z",
-    featured: true,
   },
   {
     id: "p6",

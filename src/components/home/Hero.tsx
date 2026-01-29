@@ -1,15 +1,14 @@
 const Hero = () => {
     return (
         <div className="text-center space-y-5">
-            <h1 className="text-4xl md:text-6xl font-semibold max-w-3xl text-center mt-4 ">
-                Discover Our Marketplace
+            <h1 className="text-4xl md:text-6xl font-bold max-w-3xl text-center mt-4 tracking-tight">
+                Discover Our <span className="text-brand">Marketplace</span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Explore customized storefronts from our top software sellers,
-                powered by the Padisquare platform.
+                powered by the <span className="text-brand font-medium">Padisquare</span> platform.
             </p>
         </div>
     )
-}
-
-export default Hero
+};
+export default Hero;

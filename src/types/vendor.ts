@@ -4,7 +4,7 @@ export interface Vendor {
   slug: string;
   name: string;
   logo: VendorLogo;
-  heroImage: string;
+  heroImage: string[];
   description?: string;
   featured?: boolean;
 }

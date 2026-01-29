@@ -9,7 +9,7 @@ export default function FeaturedVendors({
 }: FeaturedVendorsProps) {
     return (
         <section>
-            <h2 className="text-2xl font-semibold mb-8 text-gray-800">
+            <h2 className="text-2xl font-semibold mb-8 text-gray-800 dark:text-gray-200">
                 Featured Vendors
             </h2>
             <VendorGrid vendors={featuredVendors.slice(0, 3)} />
