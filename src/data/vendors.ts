@@ -1,4 +1,5 @@
-export const vendors = [
+import { Vendor } from "@/types/vendor";
+export const vendors: Vendor[] = [
   {
     id: "1",
     slug: "cool-shoes",

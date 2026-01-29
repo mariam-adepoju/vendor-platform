@@ -13,7 +13,7 @@ interface VendorCardProps {
 export default function VendorCard({ vendor }: VendorCardProps) {
     return (
         <Link href={`/site/${vendor.slug}`} className="group">
-            <Card className="overflow-hidden transition-all hover:shadow-lg border border-gray-100">
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow dark:bg-slate-900/50 border-brand/50">
                 <div className="relative h-48 overflow-hidden">
                     <Image
                         src={vendor.heroImage[0]}
@@ -27,10 +27,11 @@ export default function VendorCard({ vendor }: VendorCardProps) {
                 </CardHeader>
                 <CardContent>
                     {vendor.description && (
-                        <p className="text-sm text-gray-600 line-clamp-2">
+                        <p className="text-sm line-clamp-2">
                             {vendor.description}
                         </p>
                     )}
+
                 </CardContent>
                 <CardFooter>
                     <span className="font-semibold text-brand">

@@ -19,8 +19,8 @@ export default function ProductSort() {
 
     return (
         <select
-            className="border rounded-lg px-3 py-2 bg-white text-sm focus:ring-2 focus:ring-brand outline-none"
-            value={params.get("sort") ?? "recent"} // Controlled value
+            className="border text-muted-foreground rounded-lg px-3 py-2 bg-white dark:bg-slate-950 border-slate-200 dark:border-slate-800 focus:ring-brand focus:border-brand/50"
+            value={params.get("sort") ?? "recent"}
             onChange={(e) => onChange(e.target.value)}
         >
             <option value="recent">Most Recent</option>
