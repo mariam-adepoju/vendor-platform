@@ -19,7 +19,7 @@ export default function VendorProducts({
         );
     }
     return (
-        <section className="container mx-auto px-6 py-10 space-y-6">
+        <section className="container mx-auto px-6 py-6 md:py-10 space-y-6">
             <h2 className="text-4xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Products</h2>
             <div className="flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
                 <ProductSearch />

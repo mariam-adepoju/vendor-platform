@@ -17,26 +17,28 @@ import {
     DialogDescription,
 } from "@/components/ui/dialog";
 import { Search } from "lucide-react";
+import { useState } from "react";
 
 interface VendorSearchProps {
     vendors: Vendor[];
 }
 
 export default function VendorSearch({ vendors }: VendorSearchProps) {
+    const [isOpen, setIsOpen] = useState(false);
     const router = useRouter();
     const goToVendor = (slug: string) => {
         router.push(`/site/${slug}`);
+        setIsOpen(false);
     };
-
     return (
-        <Dialog>
+        <Dialog open={isOpen} onOpenChange={setIsOpen}>
             <DialogTrigger asChild>
-                <button className="w-full max-w-xl flex items-center gap-3 rounded-xl border-2 border-brand bg-white px-6 py-4 shadow-sm ring-1 ring-gray-200 transition-all hover:ring-brand hover:shadow-md dark:bg-slate-900 dark:ring-slate-800">
+                <button className="w-full mx-auto md:max-w-xl max-w-[350px] flex items-center gap-3 rounded-xl border-2 border-brand bg-white px-6 py-4 shadow-sm ring-1 ring-gray-200 transition-all hover:ring-brand hover:shadow-md dark:bg-slate-900 dark:ring-slate-800">
                     <Search className="w-5 h-5 text-brand" />
                     <span className="text-lg text-brand">Search vendors…</span>
                 </button>
             </DialogTrigger>
-            <DialogContent className="p-0 max-w-lg overflow-hidden">
+            <DialogContent className="p-0 lg:max-w-lg max-w-[350px] overflow-hidden">
                 <div className="sr-only">
                     <DialogTitle>Search Vendors</DialogTitle>
                     <DialogDescription>
@@ -44,7 +46,7 @@ export default function VendorSearch({ vendors }: VendorSearchProps) {
                     </DialogDescription>
                 </div>
 
-                <Command>
+                <Command >
                     <CommandInput placeholder="Search vendors..." />
                     <CommandList>
                         <CommandEmpty>No vendors found.</CommandEmpty>
